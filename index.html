@@ -4,15 +4,28 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pomodoro-App</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="app-container">
-        <h1>Pomodoro</h1>
+        <h1>Pomodoro Timer</h1>
         <h2 class="appp-status">Press Start to begin </h2>
-        <svg height="100" width="100" xmlns="http://www.w3.org/2000/svg">
-            <circle r="45" cx="50" cy="50" fill="red" />
-        </svg>
-    
+
+        <div class="timer-circle">
+            <div class="counter-box">
+                <h3><span class="min">25</span> : <span class="sec">00</span></h3>
+            </div>
+        </div>
+
+        <button class="start-btn">Start</button>
+        
     </div>
+    <script src="app.js"></script><!-- Added at the bottom so that the DOM will load before running the JavaScript-->
 </body>
 </html>
+
+<!-- JavaScript Execution:
+
+When the browser encounters a <script> tag, it may block the rendering process to fetch and execute the JavaScript.
+If the <script> tag is in the head section and is not marked with defer or async, it will block the parsing of HTML until the script is fetched and executed.
+Scripts at the end of the body tag are executed after the HTML is completely parsed and the DOM is fully constructed. -->

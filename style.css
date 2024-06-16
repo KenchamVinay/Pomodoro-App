@@ -1,0 +1,50 @@
+/* Define the custom font */
+@font-face {
+    font-family: 'dogica';
+    src: url('assets/dogica/OTF/dogicabold.otf') format('otf');
+    font-weight: normal;
+    font-style: normal;
+}
+  
+/* Apply the custom font to your elements */
+
+body {
+  font-family: 'dogica', sans-serif;
+}
+  
+h1,h2{
+  text-align: center;
+
+}
+
+.app-container{
+  text-align: center;
+}
+
+.timer-circle{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background-color: black;
+    margin: 0px auto 0px auto;
+    border: solid gray 8px ;
+}
+
+.counter-box{
+  color: deeppink;
+}
+
+.start-btn{
+  display: flex;
+  width: 100px;
+  height: 25px;
+  align-items: center;
+  justify-content: center;
+  margin: 0px auto 0px auto;
+}
+
+
