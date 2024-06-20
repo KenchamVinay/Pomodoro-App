@@ -1,8 +1,11 @@
 //reqired variables
 const button = document.querySelector(".start-btn");
+const reset = document.querySelector(".reset-btn");
 const session = document.querySelector(".min");
 let state = true;
 let myInterval;
+let resetState = false;
+
 //Main function to maintain state and total session time and give an aleart according to the user action.
 const appTimer = () => {
     const sessionAmount = Number.parseInt(session.textContent);
@@ -43,6 +46,21 @@ const appTimer = () => {
     }
 }
 
+const resetFunction = () =>{
+    if(!resetState && state){
+        alert("Already on Reset");
+    }else {
+        clearInterval(myInterval);
+        state = true;
+        const min = document.querySelector(".min");
+        const sec = document.querySelector(".sec");
+        min.textContent = "25";
+        sec.textContent = "00";
+    }
+}
+
 //Runs after user is interacted with the Start button and since the event listner is already reg this line of code runs first.
-button.addEventListener('click',appTimer);
 //At first run the delay might not be 1000ms exactly, from second run onwards the delay will be 1 sec.
+button.addEventListener('click',appTimer);
+
+reset.addEventListener('click',resetFunction);

@@ -1,11 +1,10 @@
-/* Define the custom font */
+/* Defined the custom font */
 @font-face {
     font-family: 'dogica';
     src: url('assets/dogica/OTF/dogicabold.otf') format('otf');
     font-weight: normal;
     font-style: normal;
 }
-
 
 body{
   font-family: 'dogica', sans-serif;
@@ -26,6 +25,7 @@ body{
   z-index: -1; 
   
 }
+
 h2{
   letter-spacing: -2px;
 }
@@ -42,8 +42,6 @@ h2{
   text-align: center;
   z-index: 1;
 }
-
-
 
 .counter-box{
   color:#b25f71;
@@ -63,23 +61,22 @@ h2{
   }
 }
 
-.start-btn{
+.buttons{
+  display: flex;
+  justify-content:space-evenly;
+}
+
+.start-btn,.reset-btn{
   font-family: 'dogica', sans-serif;
   letter-spacing: -5px;
   font-size: 32px;
   font-weight:600;
   color: lightblue;
   text-shadow: 2px 4px 1px black ;
-  display: flex;
-  width: 190px;
-  height: 50px;
-  align-items: center;
-  justify-content: center;
-  margin: 0px auto 0px auto;
-  padding: 30px;
+  padding: 27px;
   background-color: transparent;
   border: transparent;
-  border-radius: 30px;
+  border-radius: 50px;
   background: rgba(255, 255, 255, 0.2);
   backdrop-filter: blur(10px);
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -88,9 +85,7 @@ h2{
   
 }
 
-.start-btn:hover {
+.start-btn:hover,.reset-btn:hover {
   transform: translateY(-5px);
   box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
 }
-
-
